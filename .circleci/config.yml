@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: nixery.dev/shell/jsonnet/jq/diffutils
+      - image: nixery.dev/shell/gnumake/jsonnet/jq/diffutils
     steps:
       - checkout
       - run:
