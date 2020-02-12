@@ -1,0 +1,8 @@
+{
+  new(
+    flux,
+  )::
+    {
+        query: flux,
+    },
+}

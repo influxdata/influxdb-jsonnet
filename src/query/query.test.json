@@ -1,0 +1,5 @@
+[
+    {
+        "query": "from(bucket: \"bucket\")\n|> range(start: -1h)\n"
+    }
+]

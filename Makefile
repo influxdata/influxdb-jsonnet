@@ -1,6 +1,6 @@
 SHELL := /bin/bash
 
-TESTS := $(patsubst %.test.jsonnet,%, $(wildcard ./src/*/*.test.jsonnet))
+TESTS := $(patsubst %.test.jsonnet,%, $(shell find ./src -type f -name '*.test.jsonnet'))
 TEST_DIR := ".test"
 
 setup:
@@ -11,6 +11,6 @@ test: setup $(TESTS)
 
 %:
 	@jsonnet -J ./src $@.test.jsonnet -o $(TEST_DIR)/$(notdir $@).json
-	@diff <(jq -S . $@.test.json) <(jq -S . $(TEST_DIR)/$(notdir $@).json)
+	@if ! diff <(jq -S . $@.test.json) <(jq -S . $(TEST_DIR)/$(notdir $@).json); then echo "$@ : FAILED"; fi
 
 .PHONY: setup test

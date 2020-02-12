@@ -1,4 +1,4 @@
-local influxdb = import 'influxdb.libsonnet';
+local influxdb = import '../influxdb.libsonnet';
 local label = influxdb.label;
 
 [

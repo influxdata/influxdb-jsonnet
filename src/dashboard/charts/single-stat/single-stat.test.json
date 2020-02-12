@@ -1,0 +1,53 @@
+[
+    {
+        "kind": "Single_Stat",
+        "name": "my_single_stat_one",
+        "prefix": "sumtin",
+        "tickPrefix": "true",
+        "suffix": "days",
+        "tickSuffix": "true",
+        "note": "",
+        "noteOnEmpty": true,
+        "xPos": 1,
+        "yPos": 2,
+        "width": 6,
+        "height": 3,
+        "decimalPlaces": 1,
+        "shade": true,
+        "xColumn": "_time",
+        "yColumn": "_value",
+        "queries": [
+            {
+                "query": "from(bucket: \"b1\")\n|> range(start: -2h)\n"
+            }
+        ],
+        "colors": []
+    },
+    {
+        "kind": "Single_Stat",
+        "name": "my_single_stat_two",
+        "prefix": "sumtin",
+        "tickPrefix": "true",
+        "suffix": "days",
+        "tickSuffix": "true",
+        "note": "My Single Stat Note",
+        "noteOnEmpty": true,
+        "xPos": 1,
+        "yPos": 2,
+        "width": 6,
+        "height": 3,
+        "decimalPlaces": 1,
+        "shade": true,
+        "xColumn": "_time",
+        "yColumn": "_value",
+        "queries": [
+            {
+                "query": "from(bucket: \"b1\")\n|> range(start: -2h)\n"
+            },
+            {
+                "query": "from(bucket: \"b2\")\n|> range(start: -4h)\n"
+            }
+        ],
+        "colors": []
+    }
+]
