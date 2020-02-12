@@ -1,0 +1,10 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: nixery.dev/shell/jsonnet/jq/diffutils
+    steps:
+      - checkout
+      - run:
+          name: tests/unit
+          command: make test
