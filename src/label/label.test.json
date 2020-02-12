@@ -1,0 +1,23 @@
+[{
+        "apiVersion": "influxdata.com/v2alpha1",
+        "kind": "Label",
+        "metadata": {
+            "name": "my_label"
+        },
+        "spec": {
+            "color": "#FF0000",
+            "description": ""
+        }
+    },
+    {
+        "apiVersion": "influxdata.com/v2alpha1",
+        "kind": "Label",
+        "metadata": {
+            "name": "other_label"
+        },
+        "spec": {
+            "color": "#00FF00",
+            "description": "My Other Label"
+        }
+    }
+]
