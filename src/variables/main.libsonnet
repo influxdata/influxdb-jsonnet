@@ -2,6 +2,10 @@
   new(
     name,
     description="",
+    type="",
+    query="",
+    language="",
+    values=[]
   )::
     {
         "apiVersion": "influxdata.com/v2alpha1",
@@ -11,6 +15,10 @@
         },
         "spec": {
           "description": description,
+          "type":type,
+          "query": query,
+          "language":language,
+          "values":values
         }
       },
 }
