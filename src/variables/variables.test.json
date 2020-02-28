@@ -8,7 +8,7 @@
     "spec": {
       "description": "var_query_1 desc",
       "type": "query",
-      "query": "buckets()  |> filter(fn: (r) => r.name !~ /^_/)  |> rename(columns: {name: \"_value\"})  |> keep(columns: [\"_value\"])",
+      "query": "buckets()  |> filter(fn: (r) => r.name !~ /^_/)  |> rename(columns: {name: \"_value\"})  |> keep(columns: [\"_value\"])\n",
       "language": "flux"
     }
   },
