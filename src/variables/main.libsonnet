@@ -1,3 +1,7 @@
+   local join(a) =
+        local notNull(i) = i != null;
+        local maybeFlatten(acc, i) = if std.type(i) == "array" then acc + i else acc + [i];
+        std.foldl(maybeFlatten, std.filter(notNull, a), []);
 {
   new(
     name,
@@ -7,7 +11,7 @@
     language="",
     values=[]
   )::
-[if type == "query" then {
+join([if type == "query" then {
     "apiVersion": "influxdata.com/v2alpha1",
     "kind": "Variable",
     "metadata": {
@@ -44,5 +48,6 @@
             "values":values
           }
         },
-]
+])
+
 }
