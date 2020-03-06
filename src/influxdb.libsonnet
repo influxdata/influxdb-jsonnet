@@ -5,4 +5,5 @@
   query:: import 'query/main.libsonnet',
   variables:: import 'variables/main.libsonnet',
   tasks:: import 'tasks/main.libsonnet',
+  telegraf:: import 'telegraf/main.libsonnet',
 }
