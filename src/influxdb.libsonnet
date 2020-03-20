@@ -4,5 +4,5 @@
   label:: import 'label/main.libsonnet',
   query:: import 'query/main.libsonnet',
   telegraf:: import 'telegraf/main.libsonnet',
-  variables:: import 'variables/main.libsonnet',
+  variable:: import 'variable/main.libsonnet',
 }
