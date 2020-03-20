@@ -1,0 +1,51 @@
+[
+  {
+    "kind": "gauge",
+    "name": "my_gauge_one",
+    "prefix": "prefix",
+    "tickPrefix": "true",
+    "suffix": "suffix",
+    "tickSuffix": "false",
+    "note": "",
+    "noteOnEmpty": true,
+    "xPos": 1,
+    "yPos": 2,
+    "width": 6,
+    "height": 3,
+    "decimalPlaces": 1,
+    "xColumn": "_time",
+    "yColumn": "_value",
+    "queries": [
+      {
+        "query": "from(bucket: \"b1\")\n|> range(start: -2h)\n"
+      }
+    ],
+    "colors": []
+  },
+  {
+    "kind": "gauge",
+    "name": "my_gauge_two",
+    "prefix": "prefix",
+    "tickPrefix": "true",
+    "suffix": "suffix",
+    "tickSuffix": "false",
+    "note": "My Gauge Note",
+    "noteOnEmpty": true,
+    "xPos": 1,
+    "yPos": 2,
+    "width": 6,
+    "height": 3,
+    "decimalPlaces": 1,
+    "xColumn": "_time",
+    "yColumn": "_value",
+    "queries": [
+      {
+        "query": "from(bucket: \"b1\")\n|> range(start: -2h)\n"
+      },
+      {
+        "query": "from(bucket: \"b2\")\n|> range(start: -4h)\n"
+      }
+    ],
+    "colors": []
+  }
+]
