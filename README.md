@@ -1,3 +1,5 @@
+This repo is no longer used per tky.
+
 # InfluxDB Jsonnet
 
 This is [jsonnet](https://jsonnet.org/) bindings for InfluxDB's [pkger](https://v2.docs.influxdata.com/v2.0/reference/cli/influx/pkg/).
